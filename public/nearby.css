@@ -1,0 +1,173 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/********** Header ***************************/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.5rem;
+  padding: 10px;
+  background-color: #553d3d;
+  font-size: 1.3rem;
+  color: white;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 30px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+input {
+  width: 100%;
+  margin: 0 5px;
+  padding: 0 5px;
+  color: black;
+}
+
+form button {
+  padding: 0 5px;
+  border-left: 1px solid #dfdfdf;
+  border-radius: 0 5px 5px 0;
+  background-color: #05b177;
+}
+
+i {
+  font-size: 2rem;
+}
+
+
+/********** Navbar *****************************************/
+nav {
+  position: fixed;
+  right: 0;
+  z-index: 1;
+  height: 100%;
+  width: 160px;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 1.2rem;
+  transition: 0.4s;
+  overflow-y: scroll;
+}
+
+nav.hidden {
+  right: -160px;
+}
+
+nav div {
+  margin: 8px 0;
+  border-bottom: 1px solid #efefef;
+}
+
+nav div:last-of-type {
+  border-bottom: none;
+}
+
+.nav-label {
+  font-size: 0.9rem;
+  font-weight: lighter;
+  font-style: italic;
+  color: #efefef;
+}
+
+nav li {
+  margin: 4px;
+  transition: 0.2s;
+}
+
+nav li:hover {
+  margin-left: 8px;
+}
+
+li.inactive {
+  color: #555555;
+}
+
+a.active {
+  color: rgb(204, 93, 93);
+}
+
+
+/********** Main section: Map and List *******************************/
+main {
+  display: flex;
+  align-items: stretch;
+  min-height: calc(100vh - 3.5em);
+}
+
+#map {
+  flex: 1 500px;
+}
+
+div.hidden {
+  display: none;
+}
+
+#list-page {
+  flex: 2 300px;
+  /* min-height: calc(100vh - 3.5rem); */
+  padding: 10px;
+  background-color: rgb(238, 237, 237);
+}
+
+#pagination {
+  display: flex;
+  justify-content: center;
+}
+
+#pagination button {
+  margin: 0 8px;
+}
+
+.card {
+  width: 100%;
+  margin: 10px 0;
+  padding: 5px;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.card h3 {
+  border-bottom: 1px solid rgb(102, 102, 102);
+  font-style: 1.1rem;
+  font-weight: bold;
+}
+
+.message {
+  margin: 40px auto;
+  text-align: center;
+}
+
+
+/************** Responsive ************************************************** */
+@media (min-width: 700px) {
+  #view {
+    display: none;
+  }
+
+  div.hidden {
+    display: block;
+  }  
+}
+
+@media (min-width: 900px) {  
+  nav {
+    position: static;
+    height: auto;
+  }
+
+  #nav-btn {
+    visibility: hidden;
+  }
+}

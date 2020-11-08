@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nearby</title>
+  <script src="https://kit.fontawesome.com/32835b108c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="nearby.css">
+</head>
+<body>
+  <header>
+    <h1>Nearby</h1>
+    <form action="#">
+      <input type="text" placeholder="search">
+      <button id="search">Go</button>
+    </form>
+    <i id="nav-btn" class="fas fa-bars"></i>
+  </header>
+  
+  <main>
+    <nav class="hidden">
+      <div id="view">
+        <p class="nav-label">View</p>
+        <ul>
+          <li id="list-view">List</li>
+          <li id="map-view" class="inactive">Map</li>
+        </ul>
+      </div>
+      <div id="types">
+        <p class="nav-label">Filter</p>
+        <ul>
+          <li><a href="#">Restaurants</a></li>
+          <li><a href="#">Caffes</a></li>
+          <li><a href="#">Stores</a></li>
+          <li><a href="#">Banking</a></li>
+          <li><a href="#">Tourism</a></li>
+          <li><a href="#">Traffic</a></li>
+          <li><a href="#">Medical</a></li>
+          <li><a href="#">Official</a></li>
+          <li><a href="#">Sports</a></li>
+          <li><a href="#">Culture</a></li>
+          <li><a href="#">Beauty</a></li>
+          <li><a href="#">Education</a></li>
+          <li><a href="#">Business</a></li>
+        </ul>
+      </div>
+      <div id="radius">
+        <p class="nav-label">Radius</p>
+        <input type="range" min="500" max="3000" value="1000">
+        <p id="radius-display">1000 <span>m</span></p>
+      </div>
+    </nav>
+    <div id="map"></div>
+    <div id="list-page" class="hidden">
+      <div id="pagination">
+        <button id="first"><<<</button>
+        <button id="previous"><</button>
+        <button id="page"></button>
+        <button id="next">></button>
+        <button id="last">>>></button>
+      </div>
+      <div id="list"></div>
+    </div>
+  </main>
+  
+  <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUx1ZToWYxAgjkmJHGsa3JN0WfmmkpmJo&callback=initMap&libraries=places&v=weekly"
+    defer
+  ></script>
+  <script src="nearby.js"></script>
+</body>
+</html>
