@@ -4,6 +4,7 @@ const searchInput = document.querySelector("form input");
 const searchBtn = document.querySelector("form button");
 const list = document.querySelector("#list")
 const navBtn = document.querySelector("#nav-btn");
+const closeNav = document.querySelector("#close-nav");
 const nav = document.querySelector("nav");
 const mapView = document.querySelector("#map-view");
 const listView = document.querySelector("#list-view");
@@ -290,6 +291,8 @@ function findTypes(selection) {
  * Toggle navigation bar on and off
  */
 navBtn.addEventListener("click", toggleNav);
+
+closeNav.addEventListener("click", toggleNav);
 
 function toggleNav(e) {
   nav.classList.toggle("hidden");

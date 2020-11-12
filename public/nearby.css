@@ -49,20 +49,21 @@ i {
 /********** Navbar *****************************************/
 nav {
   position: fixed;
+  top: 0;
   right: 0;
   z-index: 1;
   height: 100%;
-  width: 160px;
+  width: 180px;
   padding: 5px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   color: white;
   font-size: 1.2rem;
   transition: 0.4s;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 nav.hidden {
-  right: -160px;
+  right: -180px;
 }
 
 nav div {
@@ -169,5 +170,9 @@ div.hidden {
 
   #nav-btn {
     visibility: hidden;
+  }
+
+  #close-nav {
+    display: none;
   }
 }
