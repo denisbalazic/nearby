@@ -86,6 +86,7 @@ function initMap() {
  * and send request
  */
 navFilter.addEventListener("click", (e) => {
+  e.preventDefault(); // prevents default <a> action if href="#" is missing
   const filters = nav.querySelectorAll("a");
   for(filter of filters) {
     filter.classList.remove("active");
